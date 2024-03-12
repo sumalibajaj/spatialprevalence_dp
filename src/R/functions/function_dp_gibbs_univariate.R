@@ -29,7 +29,9 @@ dp_gibbs <- function(data, alpha, mu0, sigma0, sigma_y, c_init, maxIters) {
   
   # Stating DP Gibbs sampler
   for (iter in 1:maxIters) {
-    print(paste0("Iteration: ", iter))
+    if (iter %% 25 == 0){
+      print(paste0("Iteration: ", iter)) 
+    }
     for (i in 1:data_n) {
       # STEP1: remove data point from its current cluster
       # remove the data point under consideration from its cluster
