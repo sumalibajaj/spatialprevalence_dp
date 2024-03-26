@@ -37,9 +37,6 @@ run_multiple_chains <- function(n_more_chains,
                              sigma0 = sigma0, sigma = sigma, c_init = create_c_init(cl_temp, data),
                              maxIters = maxIters)
     
-    # add initial number of clusters as a column
-    results_temp <- cbind(n_init_cluster = cl_temp, results_temp)
-    
     results_list[[i]] <- results_temp
   }
   return(results_list)

@@ -15,7 +15,7 @@ normalized.vector <- function(vector) {
 }
 
 # function for Gibbs sampling for the DP
-dp_gibbs <- function(data, alpha, mu0, sigma0, sigma_y, c_init, maxIters) {
+dp_gibbs <- function(data, alpha, mu0, sigma0, sigma, c_init, maxIters) {
   data_n <- nrow(data)
   tau0 <- solve(sigma0)
   tau <- solve(sigma)
